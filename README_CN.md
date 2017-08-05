@@ -2,16 +2,16 @@
 
 RxSwift notes &amp; code
 
-[中文版 README](README_CN.md)
+[English Version README](README.md)
 
-## Preface
+## 前言
 
-## Contents
+## 目录
 
-## Reference
+## 参考
 
 - [RxSwift - raywenderlich.com](https://store.raywenderlich.com/products/rxswift)
 
-## LICENSE
+## 许可
 
 MIT
