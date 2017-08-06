@@ -80,9 +80,9 @@ Observable<String>.create { observer in
     
     // 空处置者
     return Disposables.create()
-}.subscribe {
-    print($0)
-}.addDisposableTo(disposeBag)
+    }.subscribe {
+        print($0)
+    }.addDisposableTo(disposeBag)
 print("---")
 
 // MARK: Deferred
