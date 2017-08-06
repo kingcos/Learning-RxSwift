@@ -27,6 +27,7 @@
 		4EE06053D341B032AAEC4EF4 /* Pods-RxSwfitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwfitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwfitDemo/Pods-RxSwfitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		843880E51F36C61B00D0F98E /* RxSwfitDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RxSwfitDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		843880E81F36C61B00D0F98E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		843880EF1F36C7CA00D0F98E /* 1-2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "1-2.playground"; sourceTree = "<group>"; };
 		C1AF0DE4A74FE97D91B24726 /* Pods_RxSwfitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwfitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B4231928FA9268A76D520F /* Pods-RxSwfitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwfitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwfitDemo/Pods-RxSwfitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				843880E81F36C61B00D0F98E /* main.swift */,
+				843880EF1F36C7CA00D0F98E /* 1-2.playground */,
 			);
 			path = RxSwfitDemo;
 			sourceTree = "<group>";
@@ -274,6 +276,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -282,6 +285,7 @@
 			baseConfigurationReference = C5B4231928FA9268A76D520F /* Pods-RxSwfitDemo.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LEG7CXMPKJ;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -292,6 +296,7 @@
 			baseConfigurationReference = 4EE06053D341B032AAEC4EF4 /* Pods-RxSwfitDemo.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LEG7CXMPKJ;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -316,6 +321,7 @@
 				843880EE1F36C61B00D0F98E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
