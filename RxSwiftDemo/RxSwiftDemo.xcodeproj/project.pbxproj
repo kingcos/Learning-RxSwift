@@ -29,6 +29,7 @@
 		84A26F631F36F53900D42562 /* RxSwiftDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RxSwiftDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A26F661F36F53900D42562 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		84A26F6D1F36F5B600D42562 /* 1-2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "1-2.playground"; sourceTree = "<group>"; };
+		84A26F6E1F36F76700D42562 /* 1-3.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "1-3.playground"; sourceTree = "<group>"; };
 		B462AAA443CE2EEA8098E75F /* Pods-RxSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +68,7 @@
 			children = (
 				84A26F661F36F53900D42562 /* main.swift */,
 				84A26F6D1F36F5B600D42562 /* 1-2.playground */,
+				84A26F6E1F36F76700D42562 /* 1-3.playground */,
 			);
 			path = RxSwiftDemo;
 			sourceTree = "<group>";
