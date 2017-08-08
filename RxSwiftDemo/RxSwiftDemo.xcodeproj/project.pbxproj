@@ -26,6 +26,7 @@
 /* Begin PBXFileReference section */
 		5667C23F5E08C1C6B2DBECF6 /* Pods_RxSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7600637B9AA1FE10BDFFC176 /* Pods-RxSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8401B4BD1F39BD4300D14F3D /* 1-7.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "1-7.playground"; sourceTree = "<group>"; };
 		84A26F631F36F53900D42562 /* RxSwiftDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RxSwiftDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A26F661F36F53900D42562 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		84A26F6D1F36F5B600D42562 /* 1-2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "1-2.playground"; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 				84A26F6D1F36F5B600D42562 /* 1-2.playground */,
 				84A26F6E1F36F76700D42562 /* 1-3.playground */,
 				84A26F701F38560500D42562 /* 1-5.playground */,
+				8401B4BD1F39BD4300D14F3D /* 1-7.playground */,
 			);
 			path = RxSwiftDemo;
 			sourceTree = "<group>";
