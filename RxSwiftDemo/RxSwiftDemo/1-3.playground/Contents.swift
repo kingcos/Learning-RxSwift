@@ -51,19 +51,19 @@ let behaviorSubject = BehaviorSubject(value: "0")
 // 重发之前最新的元素，即初始值
 behaviorSubject.subscribe {
     print("1 - \($0)")
-    }.addDisposableTo(disposeBag)
+    }.disposed(by: disposeBag)
 
 // 重发之前最新的元素
 behaviorSubject.onNext("1")
 behaviorSubject.subscribe {
     print("2 - \($0)")
-    }.addDisposableTo(disposeBag)
+    }.disposed(by: disposeBag)
 
 // Error
 behaviorSubject.onError(CustomError.A)
 behaviorSubject.subscribe {
     print("3 - \($0)")
-    }.addDisposableTo(disposeBag)
+    }.disposed(by: disposeBag)
 
 print("---")
 
@@ -80,7 +80,7 @@ replaySubject.onNext("3")
 // 缓冲区大小为 2，因此新订阅者只收到了最新的 2 个元素
 replaySubject.subscribe {
     print("1 - \($0)")
-}.addDisposableTo(disposeBag)
+    }.disposed(by: disposeBag)
 
 // Error: 不占用缓冲区大小
 replaySubject.onError(CustomError.A)
@@ -88,7 +88,7 @@ replaySubject.onError(CustomError.A)
 replaySubject.dispose()
 replaySubject.subscribe {
     print("2 - \($0)")
-    }.addDisposableTo(disposeBag)
+    }.disposed(by: disposeBag)
 
 print("---")
 
@@ -103,7 +103,7 @@ variable.value = "0"
 // asObservable(): 访问内部的 BehaviorSubject
 variable.asObservable().subscribe {
     print("1 - \($0)")
-}.addDisposableTo(disposeBag)
+    }.disposed(by: disposeBag)
 
 variable.value = "1"
 
@@ -150,7 +150,7 @@ func doSthWithUserLoggedIn() {
 
 session.asObservable().subscribe(onNext: { session in
     print(session)
-}).addDisposableTo(bag)
+}).disposed(by: bag)
 
 for i in 0..<2 {
     let password = i % 2 == 0 ? "root" : "123456"

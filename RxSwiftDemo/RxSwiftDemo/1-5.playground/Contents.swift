@@ -14,7 +14,7 @@ subject1
     .subscribe { _ in
         print("Not ignored - ignoreElements")
 }
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 // .next 事件被全部忽略
 subject1.onNext("1")
@@ -33,7 +33,7 @@ subject2
     .subscribe(onNext: { element in
         print("Not ignored - elementAt - \(element)")
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 // 忽略其他所有元素，只取第 n 个元素
 subject2.onNext("0")
@@ -52,7 +52,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -65,7 +65,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -78,7 +78,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -91,7 +91,7 @@ subject3
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 // 跳过元素直到触发被观察者发出 .next 事件
 subject3.onNext("1")
@@ -109,7 +109,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -122,20 +122,21 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
 // takeWhileWithIndex(): 采取元素直到不满足条件（value & index）
 Observable
     .of(2, 2, 3, 4, 5)
-    .takeWhileWithIndex({ value, index in
-        value % 2 == 0 && index < 3
+    .enumerated()
+    .takeWhile({ index, element -> Bool in
+        element % 2 == 0 && index < 3
     })
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -150,7 +151,7 @@ subject4
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 // 采取元素直到触发被观察者发出 .next 事件
 subject4.onNext("1")
@@ -168,7 +169,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -199,6 +200,6 @@ Observable<NSNumber>
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")

@@ -112,7 +112,7 @@ Observable
    .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -126,7 +126,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 left3.onNext("L-A")
 left3.onNext("L-B")
@@ -145,7 +145,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -160,14 +160,14 @@ button1
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 textField1.onNext("maimieng.c")
 textField1.onNext("maimieng.co")
-button1.onNext()
+//button1.onNext()
 textField1.onNext("maimieng.com")
-button1.onNext()
-button1.onNext()
+//button1.onNext()
+//button1.onNext()
 
 print("---")
 
@@ -180,14 +180,14 @@ textField2
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 textField2.onNext("maimieng.c")
 textField2.onNext("maimieng.co")
-button2.onNext()
+//button2.onNext()
 textField2.onNext("maimieng.com")
-button2.onNext()
-button2.onNext()
+//button2.onNext()
+//button2.onNext()
 
 print("---")
 
@@ -202,7 +202,7 @@ left4
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 left4.onNext("L-A")
 left4.onNext("L-B")
@@ -224,7 +224,7 @@ source
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 source.onNext(one)
 one.onNext("1 - 1")
@@ -253,7 +253,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -264,6 +264,6 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")

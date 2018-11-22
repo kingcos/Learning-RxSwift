@@ -68,9 +68,9 @@ sub1.dispose()
 
 let disposeBag = DisposeBag()
 
-sub2.addDisposableTo(disposeBag)
-sub3.addDisposableTo(disposeBag)
-sub4.addDisposableTo(disposeBag)
+sub2.disposed(by: disposeBag)
+sub3.disposed(by: disposeBag)
+sub4.disposed(by: disposeBag)
 
 // create: 通过特定的订阅方法实现来创建一个被观察者序列
 Observable<String>.create { observer in
@@ -82,7 +82,7 @@ Observable<String>.create { observer in
     return Disposables.create()
     }.subscribe {
         print($0)
-    }.addDisposableTo(disposeBag)
+    }.disposed(by: disposeBag)
 print("---")
 
 // MARK: Deferred
@@ -102,7 +102,7 @@ let obsFactory = Observable<Int>.deferred {
 for _ in 0..<3 {
     obsFactory.subscribe(onNext: { element in
         print(element, separator: "", terminator: " ")
-    }).addDisposableTo(disposeBag)
+    }).disposed(by: disposeBag)
     
     print("\n---")
 }
@@ -126,7 +126,7 @@ neverObs.do(onNext: { (element) in
     print("onCompleted")
 }, onDisposed: {
     print("onDisposed")
-}).addDisposableTo(disposeBag)
+}).disposed(by: disposeBag)
 print("---")
 
 // debug: 打印接收到的事件的详细信息
@@ -136,4 +136,4 @@ neverObs.debug().subscribe(onNext: { (element) in
     print("onCompleted")
 }, onDisposed: {
     print("onDisposed")
-}).addDisposableTo(disposeBag)
+}).disposed(by: disposeBag)

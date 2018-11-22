@@ -14,7 +14,7 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -27,20 +27,21 @@ Observable
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
 // mapWithIndex()
 Observable
     .of(1, 2, 3, 4, 5)
-    .mapWithIndex { value, index in
-        index < 4 ? value * 2 : value
-    }
+    .enumerated()
+    .map({ index, element in
+        index < 4 ? element * 2 : element
+    })
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 print("---")
 
@@ -64,7 +65,7 @@ studentSubject1
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 studentSubject1.onNext(stuA)
 stuA.score.value = 85
@@ -88,7 +89,7 @@ studentSubject2
     .subscribe(onNext: {
         print($0)
     })
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 
 studentSubject2.onNext(stuC)
 stuC.score.value = 85
