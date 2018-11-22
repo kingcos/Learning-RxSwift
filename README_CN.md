@@ -2,7 +2,7 @@
 
 RxSwift notes &amp; code
 
-[English Version README](README.md)
+[English](README.md) | 中文
 
 ![](https://img.shields.io/badge/language-swift-orange.svg) ![](https://img.shields.io/badge/license-MIT-000000.svg)
 
@@ -20,4 +20,4 @@ RxSwift notes &amp; code
 
 ## 许可
 
-MIT
+- MIT
