@@ -16,7 +16,7 @@ English | [中文](README_CN.md)
 
 ## Reference
 
-- [RxSwift - raywenderlich.com](https://store.raywenderlich.com/products/rxswift)
+- [RxSwift - raywenderlich.com](https://store.raywenderlich.com/products/rxswift-reactive-programming-with-swift)
 
 ## LICENSE
 

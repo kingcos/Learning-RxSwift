@@ -16,7 +16,7 @@ RxSwift notes &amp; code
 
 ## 参考
 
-- [RxSwift - raywenderlich.com](https://store.raywenderlich.com/products/rxswift)
+- [RxSwift - raywenderlich.com](https://store.raywenderlich.com/products/rxswift-reactive-programming-with-swift)
 
 ## 许可
 
